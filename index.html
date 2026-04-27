@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xCode · by xFaN</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">x<span>Code</span></div>
+        <div class="project-name" onclick="startRename()">
+            <span id="projectNameDisplay">проект</span>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <span class="sidebar-title">ПРОЕКТ</span>
+                <button class="btn-icon" onclick="addNewFile()" title="Добавить файл"></button>
+            </div>
+            <div id="fileList" class="file-list"></div>
+        </div>
+
+        <div class="editor-area">
+            <div class="actions">
+                <button class="btn btn-filled" onclick="runCode()">Запустить</button>
+                <div class="save-menu">
+                    <button class="btn" onclick="toggleSaveMenu()">Сохранить</button>
+                    <div id="saveOptions" class="save-options">
+                        <div class="save-option" onclick="saveAsHTML()">HTML</div>
+                        <div class="save-option" onclick="saveAsZIP()">ZIP</div>
+                    </div>
+                </div>
+                <button class="btn" onclick="confirmClear()">Очистить</button>
+            </div>
+
+            <div class="editor-header">
+                <span id="currentFileName">index.html</span>
+            </div>
+
+            <textarea id="codeEditor" class="editor-content" spellcheck="false" oninput="onEditorChange()"></textarea>
+
+            <div class="stats-bar">
+                <span>Количество символов:</span>
+                <span class="char-count" id="charCount">0</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="statusbar">
+        <div class="status-left">
+            <span class="status-item">xCode Collab</span>
+            <span class="status-item" id="projectNameStatus">проект</span>
+        </div>
+        <div class="status-right">
+            <span class="status-item">User</span>
+            <span class="status-item">Локальный редактор</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
