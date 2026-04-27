@@ -1,4 +1,6 @@
 # **xCode v2.1**
+[![Made by xFaN](https://img.shields.io/badge/Made%20by-xFaN-blueviolet)](https://github.com/xfancode)
+
 > **Лёгкая, мощная, работает в браузере.**
 
 ## Возможности новой версии xCode
